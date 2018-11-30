@@ -9,7 +9,7 @@ export default class App extends Component {
     super(props);
 
     let bglist = ['green',  'royalblue', 'tomato',  '#f44336', '#e91e63', '#9c27b0', '#2196f3', '#8bc34a', '#607d8b'];
-    this.state = {'title' : 'Hello Native', 'bglist' : bglist, 'styles':styles, 'bgfy': styles.bgfy};
+    this.state = {'title' : 'Helloo Native', 'bglist' : bglist, 'styles':styles, 'bgfy': styles.bgfy};
 
     this.onClickChangeBackground = this.onClickChangeBackground.bind(this);
   }
