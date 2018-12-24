@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {Button, StyleSheet, Text, View, Platform} from 'react-native';
 
 
 export default class App extends Component {
@@ -29,7 +29,7 @@ export default class App extends Component {
     return (
       <View style={[styles.container, this.state.bgfy]}>
           <Text style={styles.textify}>{this.state.title}</Text>
-          <Button title='Click Here' color={this.state.bgfy.backgroundColor} onPress={this.onClickChangeBackground}></Button>
+          <Button title='Click Here' color='gold' onPress={this.onClickChangeBackground}></Button>
       </View>
     );
   }
@@ -42,10 +42,9 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textify: {
-    fontSize: 50,
+    fontSize: 40,
     color:'white',
-    fontFamily : 'cursive'
-    
+    fontFamily : Platform.OS == 'android' ? 'cursive' : 'helvetica',
   },
   instructions: {
     textAlign: 'center',
